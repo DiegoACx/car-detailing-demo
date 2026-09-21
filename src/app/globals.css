@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #050507;
+  --color-bg-secondary: #0B0B0F;
+  --color-bg-card: #12121A;
+  --color-accent-teal: #3695b5;
+  --color-accent-green: #10B981;
+  --color-accent-blue: #2563EB;
+  --color-accent-purple: #8B5CF6;
+  --color-accent-orange: #F59E0B;
+  --color-text-primary: #FAFAFA;
+  --color-text-secondary: #8B949E;
+  --color-border: rgba(255,255,255,0.05);
+}
+
+:root {
+  --background: var(--color-bg-primary);
+  --foreground: var(--color-text-primary);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 38px;
+}
+
+body {
+  background-color: var(--background);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(54, 149, 181, 0.15), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(37, 99, 235, 0.1), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.05), transparent 50%);
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+}
+
+/* Scroll Animation Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Decorative diagonal lines pattern */
+.bg-pattern-diagonal {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(132, 195, 152, 0.05) 10px,
+    rgba(132, 195, 152, 0.05) 11px
+  );
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-teal);
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.5s infinite;
+}
