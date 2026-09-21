@@ -13,6 +13,8 @@
 
 > **Proyecto de demostración.** No es un negocio real, no acepta reservas y no guarda ni envía ningún dato. El nombre "414 Car Detailing" es ilustrativo: cualquier coincidencia con un negocio real es casual.
 
+**Demo en vivo:** https://car-detailing-demo-two.vercel.app/
+
 ## Acerca del proyecto
 
 Landing de una página y una maqueta de reservas (`/booking`), hechas con Next.js 16 (App Router), React, Tailwind CSS y Framer Motion. Presenta un servicio ficticio de detallado móvil de autos.
@@ -126,9 +128,11 @@ Para usar fotos propias o con licencia clara:
 
 **Revisión manual del autor** (no cubierta por lo automatizado): revisó la app en el navegador con el servidor de desarrollo y quedó bien, incluidos el banner de demostración y los placeholders.
 
+- Despliegue en Vercel (plan Hobby, Next.js): funcionando, verificado por el autor.
+
 **No verificado:**
 
-- Despliegue en Vercel, Linux y macOS.
+- Linux y macOS.
 - Node 20.9 y `npm ci` en un clon limpio.
 - Móvil real y otros navegadores.
 - Auditoría de accesibilidad y Lighthouse.
